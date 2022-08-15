@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <div id="gigi">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo <p>ligula eget dolor. Aenean massa. Cum sociis
+    natoque penatibus et magnis</p> dis parturient <b>bhbhbjf</b>montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+    mollis pretium. Integer tincidunt. </div>
+    <br>
+    <button onclick ='colorist()'>click</button>
+<script>
+    function colorist() {
+      const bib = document.getElementById('gigi');
+      const di = bib.getElementsByTagName('b');
+      for(let i=0; i<di.length; i++)
+      di[i].style.color='red';
+    }
+    
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const divBlock2=document.getElementById('gigi');
+const bolds=divBlock2.getElementsByTagName('b');
+for ( let i=0; i<bolds.length; i++ )
+    bolds[i].style.color='red';

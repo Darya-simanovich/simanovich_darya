@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <input type='text' name="phoneName" value="Iphone 12"> <br> <br>
+    <input type="text" name="img"
+        value="https://cdn21vek.by/img/galleries/6514/570/iphone1264gbmjnm3_apple_608bde7c26aef.png"> <br> <br>
+    <textarea name="descript" cols="20" rows="10">Apple</textarea> <br>
+
+    <br>
+    <br>
+
+    <input type = 'button' onclick="AddPhone()">add</button> <br> <br>
+    <input type = 'button' onclick="PostPhone()">render</button>
+    <br><br>
+
+    <div id='hey'></div>
+
+    <script>
+        const items = []
+        const AddPhone = () => {
+            const phoneName = document.querySelector('[name=phoneName]').value
+            const img = document.querySelector('[name=img]').value
+            const descript = document.querySelector('[name=descript]').value
+
+            const phones = {
+                img,
+                phoneName,
+                descript
+            }
+
+            items.push(phones);
+
+        }
+        const PostPhone = () => {
+            const htmlText = items.reduce((acc, item) => {
+                return `${acc}   <div class="card" style="width: 18rem;">
+            <img src="${item.img}" class="card-img-top" style="width: 16rem;>
+             <div class ="card-body">
+            <h5>${item.phoneName}</h5>
+            <br>
+                <p>${item.descript}</p>
+        </div>
+                    </div >`
+                },'')
+
+
+            const hey = document.getElementById('hey');
+            hey.innerHTML = htmlText;
+            }  
+  
+  
+
+      
+
+    </script>
+</body>
+
+</html>

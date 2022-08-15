@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <script>
+        function disemvowel() {
+            var vowels = ['а', 'у', 'о', 'и', 'э', 'ы', 'я', 'ю', 'е', 'ё', 'А', 'У', 'О', 'И', 'Э', 'Ы', 'Я', 'Ю', 'Е', 'Ё'];
+            var str = '';
+            var str2 = prompt("Напишите любое выражение:");
+            for (var i = 0; i < str2.length; i++)
+                for (var j = 0; j < vowels.length; j++)
+                    if (str2[i] === vowels[j]) {
+                        ++str;
+                        break;
+                    }
+                    return str
+        }
+ 
+        console.log(disemvowel());
+
+
+//putaus
+
+    </script>
+</body>
+
+</html>
